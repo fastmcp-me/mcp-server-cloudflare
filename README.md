@@ -28,7 +28,7 @@ This lets you use Claude Desktop, and IDE like VSCode (Cline) or any MCP Client,
 3. Check out the Cline configuration file, you should see a `cloudflare` section with your Cloudflare account ID.
 
 <div align="left">
-    <img src="https://github.com/user-attachments/assets/a24275b1-1c6f-4754-96ef-dd7b9f0f5903" alt="Example configuration file" height="160"/>
+    <img width="292" alt="Example configuration file" src="https://github.com/user-attachments/assets/ed7444d1-739f-45d3-b259-99f0814ad894"/>
 </div>
 
 ## Features
