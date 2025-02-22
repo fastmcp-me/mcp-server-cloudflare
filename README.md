@@ -38,6 +38,7 @@ This lets you use Claude Desktop, and IDE like VSCode (Cline) and Windsurf or an
 4. Check out your Windsurf MCP configuration file, you should see a `cloudflare` section either. Windsurf has limitation on the use of MCP tools, so you can't use too many tools at the same time. (Unlike Cline and Claude)
 
 <div align="left">
+  <img width="445" alt="Screenshot 2025-02-22 at 10 28 09 PM" src="https://github.com/user-attachments/assets/431a8a9a-1669-4be1-a3cf-a1cd7ba28c94" />
 </div>
 
 ## Features
