@@ -10,6 +10,10 @@ This lets you use Claude Desktop, and IDE like VSCode (Cline) or any MCP Client,
 
 ## Demo
 
+<div align="center">
+  <a href="https://youtube.com/shorts/SmN-I3XBO0g?si=bg4PqM5TJTMWdtGJ">Short Demo Video</a>
+</div>
+
 ## Setup
 
 1. Run `npx @gutmutcode/mcp-server-cloudflare init`
