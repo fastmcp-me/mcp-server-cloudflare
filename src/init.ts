@@ -104,10 +104,11 @@ export async function init(accountTag: string | undefined) {
       'cline_mcp_settings.json',
     ),
     claude: path.join(os.homedir(), 'Library', 'Application Support', 'Claude', 'claude_desktop_config.json'),
+    windsurf: path.join(os.homedir(), '.codeium', 'windsurf', 'mcp_config.json'),
   }
 
   // Define the valid client names
-  type ClientName = 'cline' | 'claude'
+  type ClientName = 'cline' | 'claude' | 'windsurf'
 
   const cloudflareConfig = {
     cline: {
@@ -120,6 +121,10 @@ export async function init(accountTag: string | undefined) {
       command: (await which('node')).trim(),
       args: [__filename, 'run', account],
     },
+    windsurf: {
+      command: (await which('node')).trim(),
+      args: [__filename, 'run', account],
+    }
   }
 
   async function writeConfig(clientName: string, configPath: string) {
