@@ -1,6 +1,6 @@
 {
   "name": "@gutmutcode/mcp-server-cloudflare",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "MCP server for interacting with Cloudflare API",
   "license": "Apache-2.0",
   "author": "Cloudflare, Inc. (https://cloudflare.com) & GMC (https://gutmutcode.com)",

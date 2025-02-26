@@ -28,8 +28,7 @@ export async function init(accountTag: string | undefined) {
     createDialog([
       `👋 Welcome to ${chalk.yellow('mcp-server-cloudflare')} v${mcpCloudflareVersion}!`,
       `💁‍♀️ This ${chalk.green("'init'")} process will ensure you're connected to the Cloudflare API`,
-      `   and install the Cloudflare MCP Server into Claude, Cline (${chalk.blue.underline('https://claude.ai/download')})`,
-      `   currently, Windsurf and Cursor are not supported yet. (becuase of the way it's built)`,
+      `   and install the Cloudflare MCP Server into Claude, Cline, Windsurf and Cursor (${chalk.blue.underline('https://claude.ai/download')})`,
       `ℹ️ For more information, visit ${chalk.blue.underline('https://github.com/GutMutCode/mcp-server-cloudflare')}`,
       `🧡 Let's get started.`,
     ]),
@@ -105,10 +104,11 @@ export async function init(accountTag: string | undefined) {
     ),
     claude: path.join(os.homedir(), 'Library', 'Application Support', 'Claude', 'claude_desktop_config.json'),
     windsurf: path.join(os.homedir(), '.codeium', 'windsurf', 'mcp_config.json'),
+    cursor: path.join(os.homedir(), '.cursor', 'mcp.json'),
   }
 
   // Define the valid client names
-  type ClientName = 'cline' | 'claude' | 'windsurf'
+  type ClientName = 'cline' | 'claude' | 'windsurf' | 'cursor'
 
   const cloudflareConfig = {
     cline: {
@@ -124,7 +124,11 @@ export async function init(accountTag: string | undefined) {
     windsurf: {
       command: (await which('node')).trim(),
       args: [__filename, 'run', account],
-    }
+    },
+    cursor: {
+      command: (await which('node')).trim(),
+      args: [__filename, 'run', account],
+    },
   }
 
   async function writeConfig(clientName: string, configPath: string) {
